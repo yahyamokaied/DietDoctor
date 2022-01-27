@@ -37,6 +37,11 @@
   "resolutions": {
     "@types/react": "^17"
   },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
   "jest": {
     "preset": "react-native",
     "moduleFileExtensions": [

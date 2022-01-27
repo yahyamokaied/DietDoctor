@@ -14,6 +14,7 @@
 		6172F2D35A4C3AA820D92908 /* libPods-DietDoctor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-DietDoctor.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-DietDoctor-DietDoctorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-DietDoctor-DietDoctorTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		CFC010D1D4A341428502F998 /* PublicSans-Thin_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17DFF8AC4A03431CB9457FFF /* PublicSans-Thin_Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DietDoctor/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DietDoctor/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DietDoctor/main.m; sourceTree = "<group>"; };
+		17DFF8AC4A03431CB9457FFF /* PublicSans-Thin_Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "PublicSans-Thin_Light.ttf"; path = "../assets/fonts/PublicSans-Thin_Light.ttf"; sourceTree = "<group>"; };
 		1D0AE47A65C8663E3B452821 /* Pods-DietDoctor-DietDoctorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DietDoctor-DietDoctorTests.release.xcconfig"; path = "Target Support Files/Pods-DietDoctor-DietDoctorTests/Pods-DietDoctor-DietDoctorTests.release.xcconfig"; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-DietDoctor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DietDoctor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-DietDoctor-DietDoctorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DietDoctor-DietDoctorTests.debug.xcconfig"; path = "Target Support Files/Pods-DietDoctor-DietDoctorTests/Pods-DietDoctor-DietDoctorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		11AF8DAD1FA744AC86B151DC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				17DFF8AC4A03431CB9457FFF /* PublicSans-Thin_Light.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CFC010D1D4A341428502F998 /* PublicSans-Thin_Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

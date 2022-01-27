@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
         color: '#22A25E',
         fontSize: 25,
         fontWeight: 'normal',
-        fontFamily: 'PublicSans-Thin_Light'
+        fontFamily: 'PublicSans-Thin'
     },
     h2: {
         color: '#22A25E',
         fontSize: 25,
-        fontFamily: 'PublicSans-Thin_Light'
+        fontFamily: 'PublicSans-Thin'
     },
 });
