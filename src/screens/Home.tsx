@@ -1,35 +1,20 @@
 import React from 'react';
-import { Text, StyleSheet, SafeAreaView, View, Dimensions, StatusBar, ScrollView, FlatList } from 'react-native';
+import { Text, StyleSheet, SafeAreaView, View, Dimensions, StatusBar, ScrollView, FlatList, TouchableOpacity, ImageBackground } from 'react-native';
 import GuidItem from '../components/GuidItem';
+import { GuidData } from '../components/GuidData';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const { width, height } = Dimensions.get('window');
 
 
 const Home = () => {
 
-    interface GUIDITEM {
-        image: string;
-        title: string;
-    }
-
-    const GuidData = [
-        {
-            key: 1,
-            image: 'https://previews.123rf.com/images/foodandmore/foodandmore1709/foodandmore170900124/85953443-gourmet-cooked-meats-and-vegetables-in-frying-pans-with-seasoning-and-garnishes-on-a-dark-background.jpg',
-            title: 'asdadas'
-        },
-        {
-            key: 2,
-            image: 'https://saladswithanastasia.com/wp-content/uploads/2020/06/VEGAN-CELERY-PORT-01.jpg',
-            title: 'asdadas'
-        }
-    ];
-
     const renderItem = ({ item }: any) => {
         return (
             <GuidItem
-                image={item.item}
+                image={item.image}
                 title={item.title}
+                color={item.color}
             />
         );
     };
@@ -49,8 +34,10 @@ const Home = () => {
                     </View>
                     <View style={[styles.row, styles.center, { width: '25%' }]}>
                         <View style={styles.icons}>
+                            <Icon name="search" size={25} color="grey" />
                         </View>
                         <View style={styles.icons}>
+                            <Icon name="person" size={25} color="grey" />
                         </View>
 
                     </View>
@@ -62,8 +49,7 @@ const Home = () => {
                 </View>
 
                 <View style={[styles.column, styles.body]}>
-                    <Text style={styles.h2}>FRIDAY</Text>
-
+                    <Text style={[styles.h2, { color: 'black' }]}>FRIDAY</Text>
                     <FlatList
                         data={GuidData}
                         horizontal={true}
@@ -73,8 +59,26 @@ const Home = () => {
                         showsHorizontalScrollIndicator={false}
                         ListEmptyComponent={<View><Text>no items</Text></View>}
                     />
+                    <View style={styles.imageBGContainer}>
+                        <ImageBackground
+                            style={styles.imageBG}
+                            source={require('../../assets/images/bg.png')}
+                            resizeMode="cover"
+                            imageStyle={{ borderRadius: width * 0.035 }}
+                        >
+
+                            <View style={styles.txtContainer}>
+                                <Text style={[styles.h2, { color: 'white' }]}>Edit with confidence</Text>
+                                <Text style={[styles.h4, { color: 'white' }]}>Take our short survey to get a meal plan tailored to you</Text>
+                                <TouchableOpacity style={styles.button}>
+                                    <Text style={styles.h3}>FRIDAY</Text>
+
+                                </TouchableOpacity>
+                            </View>
 
 
+                        </ImageBackground>
+                    </View>
 
                 </View>
 
@@ -103,14 +107,13 @@ const styles = StyleSheet.create({
     },
     column: {
         flexDirection: 'column',
+        flex: 1
     },
     center: {
         justifyContent: 'center',
         alignItems: 'center',
     },
     body: {
-        height: height * 0.75,
-        width: width,
         marginTop: height * 0.03,
         backgroundColor: 'white',
         borderTopLeftRadius: width * 0.1,
@@ -125,6 +128,36 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         margin: 4
     },
+    button: {
+        width: width * 0.4,
+        height: height * 0.04,
+        borderRadius: width * 0.25,
+        borderColor: 'white',
+        borderWidth: 1,
+        backgroundColor: 'transparent',
+        color: 'white',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 8
+    },
+    imageBGContainer: {
+        width: '95%',
+        height: height * 0.4,
+        justifyContent: 'center',
+        margin: 4,
+    },
+    imageBG: {
+        flex: 1,
+        marginHorizontal: width * 0.025
+    },
+    txtContainer: {
+        width: '46%',
+        height: '37%',
+        position: 'absolute',
+        justifyContent: 'space-between',
+        left: 20,
+        top: 10
+    },
     h1: {
         color: 'white',
         fontSize: 28,
@@ -133,18 +166,20 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start'
     },
     h2: {
-        color: 'black',
         fontSize: 20,
         fontWeight: 'bold',
         fontFamily: 'PublicSans-Thin',
-        letterSpacing: 3
     },
     h3: {
         color: 'white',
-        //color: '#22A25E',
-        fontSize: 15,
+        fontSize: 14,
         fontWeight: 'normal',
         fontFamily: 'PublicSans-Thin',
-        letterSpacing: 3
+    },
+    h4: {
+        color: 'white',
+        fontSize: 11,
+        fontWeight: 'normal',
+        fontFamily: 'PublicSans-Thin',
     },
 });

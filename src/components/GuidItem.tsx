@@ -1,24 +1,18 @@
 import React from 'react';
 import { Text, StyleSheet, Image, View, Dimensions } from 'react-native';
+import { GUIDITEM } from './GuidData';
 
 const { width, height } = Dimensions.get('window');
 
-interface GUIDITEM {
-    image: string;
-    title: string;
-}
+const GuidItem = ({ image, title, color }: GUIDITEM) => {
 
-const GuidItem = ({ image, title }: GUIDITEM) => {
-
-
-    const localImage = { uri: image };
 
     return (
-        <View style={styles.item}>
+        <View style={[styles.item, { backgroundColor: color }]}>
 
             <View style={styles.imageContainer} >
                 <Image
-                    source={localImage}
+                    source={{ uri: image }}
                     style={styles.image}
                     resizeMode="cover"
                 />
@@ -39,7 +33,6 @@ const styles = StyleSheet.create({
         height: height / 2.5,
         borderRadius: width * 0.05,
         margin: 8,
-        backgroundColor: 'pink',
         flexDirection: 'column'
     },
     imageContainer: {
